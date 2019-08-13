@@ -1,0 +1,50 @@
+Step: step-credential-initializer-jmx9l:
+
+{"level":"warn","ts":1565715110.8027275,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565715110.8037205,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Step: step-working-dir-initializer-89msn:
+
+{"level":"warn","ts":1565715111.3192158,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1565715111.3255196,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+Step: step-place-tools:
+
+Step: step-git-source-meta-***********-environment-jx-j2btq:
+
+{"level":"warn","ts":1565715116.3518813,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1565715116.6225104,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/***********/environment-jx-rocks-staging.git @ deb8f9d68bf9f5756c18ab29d16b0708a68c89bb in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:deb8f9d68bf9f5756c18ab29d16b0708a68c89bb,1:6b88dfb819e396a787e676702fb11d28d9e5c7c7","time":"2019-08-13T16:51:57Z"}
+{"level":"debug","msg":"ran git fetch --unshallow origin 6b88dfb819e396a787e676702fb11d28d9e5c7c7: deb8f9d68bf9f5756c18ab29d16b0708a68c89bb: in ","time":"2019-08-13T16:51:57Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T16:51:57Z"}
+{"level":"debug","msg":"ran git reset --hard deb8f9d68bf9f5756c18ab29d16b0708a68c89bb in ","time":"2019-08-13T16:51:57Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T16:51:57Z"}
+{"level":"debug","msg":"ran git merge 6b88dfb819e396a787e676702fb11d28d9e5c7c7 in ","time":"2019-08-13T16:51:57Z"}
+MERGED SHA SUBJECT
+6b88dfb81  chore: Promote jx-go to version 0.0.1
+Step: step-merge-pull-refs:
+
+{"level":"debug","msg":"ran git fetch origin 6b88dfb819e396a787e676702fb11d28d9e5c7c7: deb8f9d68bf9f5756c18ab29d16b0708a68c89bb: in ","time":"2019-08-13T16:51:59Z"}
+{"level":"debug","msg":"Unshallowed git repo in ","time":"2019-08-13T16:51:59Z"}
+{"level":"debug","msg":"ran git checkout master in ","time":"2019-08-13T16:51:59Z"}
+{"level":"debug","msg":"ran git reset --hard deb8f9d68bf9f5756c18ab29d16b0708a68c89bb in ","time":"2019-08-13T16:51:59Z"}
+{"level":"debug","msg":"ran clean --force -d . in ","time":"2019-08-13T16:51:59Z"}
+{"level":"debug","msg":"ran git merge 6b88dfb819e396a787e676702fb11d28d9e5c7c7 in ","time":"2019-08-13T16:51:59Z"}
+MERGED SHA SUBJECT
+6b88dfb81  chore: Promote jx-go to version 0.0.1
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-13T16:52:00Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions","time":"2019-08-13T16:52:00Z"}
+{"level":"info","msg":"selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment","time":"2019-08-13T16:52:01Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-promotion-build-effective.yml","time":"2019-08-13T16:52:03Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"PipelineActivity for ***********-environment-jx-rocks-staging-PR-1-1","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"Checking if batch build reconciling is needed","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"upserted PipelineResource ***********-environment-jx-rock for the git repository https://github.com/***********/environment-jx-rocks-staging.git and branch PR-1","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"upserted Task ***********-environment-jx-rock-from-build-pack-1","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"upserted Pipeline ***********-environment-jx-rock-1","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"created PipelineRun ***********-environment-jx-rock-1","time":"2019-08-13T16:52:04Z"}
+{"level":"info","msg":"created PipelineStructure ***********-environment-jx-rock-1","time":"2019-08-13T16:52:04Z"}
